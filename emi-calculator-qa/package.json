@@ -1,0 +1,23 @@
+{
+  "name": "emi-calculator-qa",
+  "version": "1.0.0",
+  "description": "QA assessment: test plan, test cases and Playwright + TypeScript automation for https://emicalculator.net/",
+  "private": true,
+  "scripts": {
+    "test": "playwright test",
+    "test:unit": "playwright test --project=unit",
+    "test:smoke": "playwright test --grep @smoke",
+    "test:regression": "playwright test --grep @regression",
+    "test:headed": "playwright test --headed --project=chromium",
+    "report": "playwright show-report",
+    "codegen": "playwright codegen https://emicalculator.net/"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.48.0",
+    "@types/node": "^20.14.0",
+    "typescript": "^5.5.0"
+  },
+  "dependencies": {
+    "exceljs": "^4.4.0"
+  }
+}
